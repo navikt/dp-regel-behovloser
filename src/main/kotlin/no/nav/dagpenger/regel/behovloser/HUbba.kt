@@ -16,7 +16,8 @@ class HUbba(rapidsConnection: RapidsConnection) : River.PacketListener {
             validate { it.requireValue("@event_name", "behov") }
             validate { it.requireAll("@behov", listOf("VurderingAvMinsteInntekt")) }
             validate { it.requireKey("ident", "virkningsdato", "@behovId", "oppgaveUUID") }
-            validate { it.rejectKey("@løsning") }
+            //todo
+            validate { it.rejectKey("en guard clause") }
         }
     }
 
@@ -39,6 +40,9 @@ class HUbba(rapidsConnection: RapidsConnection) : River.PacketListener {
             packet["beregningsDato"] = packet["virkningsdato"].asText()
             packet["kontekstId"] = oppgaveUUID
             packet["kontekstType"] = "saksbehandling"
+            //todo
+            packet["en guard clause"] = "guard"
+
 
             context.publish(packet.toJson())
         }
