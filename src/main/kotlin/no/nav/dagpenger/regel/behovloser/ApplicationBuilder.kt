@@ -10,6 +10,7 @@ internal class ApplicationBuilder(configuration: Map<String, String>) : RapidsCo
 
     init {
         rapidsConnection.register(this)
+        HUbba(rapidsConnection)
     }
 
     fun start() {
