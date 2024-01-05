@@ -26,7 +26,6 @@ internal object Configuration {
             map + pair.second
         }
 
-
 //    val azureAdClient by lazy {
 //        val azureAdConfig = OAuth2Config.AzureAd(properties)
 //        CachedOauth2Client(

@@ -10,6 +10,8 @@ dependencies {
     implementation(libs.kotlin.logging)
     implementation(libs.rapids.and.rivers)
     implementation(libs.konfig)
+
+    testImplementation(libs.kotest.assertions.core)
 }
 application {
     mainClass.set("no.nav.dagpenger.regel.behovloser.AppKt")
