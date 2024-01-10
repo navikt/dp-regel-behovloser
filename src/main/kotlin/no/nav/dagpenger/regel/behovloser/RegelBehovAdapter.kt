@@ -55,7 +55,7 @@ class RegelBehovAdapter(rapidsConnection: RapidsConnection) : River.PacketListen
                 packet["fødselsnummer"] = fødselsnummer
                 packet["beregningsDato"] = packet["virkningsdato"].asText()
                 packet["kontekstId"] = oppgaveUUID
-                packet["kontekstType"] = "vilkårsvurdering"
+                packet["kontekstType"] = "saksbehandling"
                 packet["@prosessertAv"] = "dp-regel-behovloser"
 
                 context.publish(packet.toJson())

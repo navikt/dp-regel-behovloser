@@ -29,7 +29,7 @@ class RegelBehovAdapterTest {
             message["fødselsnummer"].asText() shouldBe "12345678910"
             message["beregningsDato"].asText() shouldBe "2021-01-01"
             message["kontekstId"].asText() shouldBe "4c72f811-b27c-406b-881e-b01b58becb6f"
-            message["kontekstType"].asText() shouldBe "vilkårsvurdering"
+            message["kontekstType"].asText() shouldBe "saksbehandling"
             message["@prosessertAv"].asText() shouldBe "dp-regel-behovloser"
         }
     }
