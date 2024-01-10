@@ -48,6 +48,7 @@ class RegelBehovAdapter(rapidsConnection: RapidsConnection) : River.PacketListen
             val fødselsnummer = packet["ident"].asText()
             val oppgaveUUID = packet["oppgaveUUID"].asText()
             withLoggingContext("behovId" to behovId) {
+                logger.info("Mottok behov for vurdering av minsteinntekt. BehovId: $behovId, OppgaveId: $oppgaveUUID")
                 sikkerLogg.info("Mottok behov for vurdering av minsteinntekt: ${packet.toJson()}")
 
                 packet["behovId"] = behovId
