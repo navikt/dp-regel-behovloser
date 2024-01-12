@@ -51,6 +51,7 @@ class RegelBehovAdapter(rapidsConnection: RapidsConnection) : River.PacketListen
                 logger.info("Mottok behov for vurdering av minsteinntekt. BehovId: $behovId, OppgaveId: $oppgaveUUID")
                 sikkerLogg.info("Mottok behov for vurdering av minsteinntekt: ${packet.toJson()}")
 
+                // Legger på behovId på "gammelt" format, som dp-regel-* appene forstår
                 packet["behovId"] = behovId
                 packet["fødselsnummer"] = fødselsnummer
                 packet["beregningsDato"] = packet["virkningsdato"].asText()
